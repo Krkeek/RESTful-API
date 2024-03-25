@@ -9,8 +9,19 @@ router.get('/',(req, res, next)=>{
 })
 
 router.post('/',(req, res, next)=>{
+
+    const product = {
+     name: req.body.name,
+     price: req.body.price   
+
+    }
+
+
+
+
     res.status(201).json({
-        messsage: 'Handling POST requests to /products'
+        messsage: 'Handling POST requests to /products',
+        createdProduct: product 
     })
 
 })
