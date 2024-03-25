@@ -8,6 +8,7 @@ const productRoutes = require('./api/routes/products')
 const orderRoutes = require('./api/routes/orders');
 
 mongoose.connect('mongodb+srv://krkeek:IYnv2MtkKlxz5shX@cluster0.934lwya.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.Promise = global.Promise;
 
 app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({extended: false}))
